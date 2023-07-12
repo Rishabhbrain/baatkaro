@@ -45,24 +45,6 @@ header {
   padding: 0;
 }
 
-.hamburger-icon::before,
-.hamburger-icon::after,
-.hamburger-icon div {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.hamburger-icon::before {
-  transform-origin: top left;
-}
-
-.hamburger-icon::after {
-  transform-origin: bottom left;
-}
 
 nav {
   display: flex;
@@ -321,9 +303,7 @@ border-radius: 4px; /* Add rounded corners */
   background-color: #f1f1f1; /* Change the background color on hover */
 }
 
-.hamburger-menu {
-  display: none;
-}
+
 
 .help-yourself-section {
   padding: 40px;
@@ -447,11 +427,15 @@ border-radius: 4px; /* Add rounded corners */
   display: none;
 }
 
+.hamburger-menu{
+  color: #4caf50;
+}
 
 /* Media query for screens with a maximum width of 768px */
 @media only screen and (max-width: 768px) {
   body {
-    width: max-content;
+    width:min-content;
+    max-width: 768px;
   }
   .dialog{
     display: block;
