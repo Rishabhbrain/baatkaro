@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <style>
+    .card {
+      display: none;
+    }
+    .card.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Logo</div>
+    <div class="hamburger-menu">
+      <button class="hamburger-icon" onclick="toggleMenu()"></button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Index.HTML">Home</a></li>
+        <li><a href="#" onclick="scrollToTestimonials()">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="contactB.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <div class="left-content">
+        <h1>Find the best Psychologist/Counselor, therapist near you!</h1>
+        <p>Book affordable and accessible mental health counseling sessions in your language.</p>
+        <div class="search-box">
+          <select id="cityDropdown" onchange="updateSearchInput(this.value)">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+          <input id="searchInput" type="text" placeholder="Search...">
+          <button type="submit" onclick="search()">Search</button>
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="hero-cards">
+          <div class="card active">
+            <img src="card1.jpg" alt="Hero card1">
+          </div>
+          <div class="card">
+            <img src="card2.jpg" alt="Hero card2">
+          </div>
+          <div class="card">
+            <img src="card3.jpg" alt="Hero card3">
+          </div>
+        </div>
+        <div class="card-buttons">
+          <button class="card-button active" onclick="toggleCard(0)"></button>
+          <button class="card-button" onclick="toggleCard(1)"></button>
+          <button class="card-button" onclick="toggleCard(2)"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hashtag-buttons">
+    <div class="row">
+      <button class="hashtag-button">#Psychology</button>
+      <button class="hashtag-button">#Counseling</button>
+      <button class="hashtag-button">#Therapy</button>
+      <button class="hashtag-button">#MentalHealth</button>
+      <button class="hashtag-button">#Mindfulness</button>
+      <button class="hashtag-button">#StressManagement</button>
+    </div>
+    <div class="row" style="padding: 20px;">
+      <button class="hashtag-button">#Wellness</button>
+      <button class="hashtag-button">#SelfCare</button>
+      <button class="hashtag-button">#Relationships</button>
+      <button class="hashtag-button">#EmotionalSupport</button>
+      <button class="hashtag-button">#SelfImprovement</button>
+      <button class="hashtag-button">#PersonalDevelopment</button>
+    </div>
+  </div>
+
+  <section class="our-services-section" id="services">
+    <h2>Our Services</h2>
+    <div class="service">Service 1</div>
+    <div class="service">Service 2</div>
+    <div class="service">Service 3</div>
+  </section>
+
+  <section class="our-partners-section">
+    <h2>Our Trusted Partners</h2>
+    <div class="partners">
+      <div class="row">
+        <div class="partner"><h3>partner1</h3></div>
+        <div class="partner"><h3>partner2</h3></div>
+        <div class="partner"><h3>partner3</h3></div>
+      </div>
+      <div class="row">
+        <div class="partner"><h3>partner1</h3></div>
+        <div class="partner"><h3>partner2</h3></div>
+        <div class="partner"><h3>partner3</h3></div>
+      </div>
+      <div class="row">
+        <div class="partner"><h3>partner1</h3></div>
+        <div class="partner"><h3>partner2</h3></div>
+        <div class="partner"><h3>partner3</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-yourself-section">
+    <h2>4 Ways to Help Yourself</h2>
+    <div class="help-hero-cards">
+      <div class="help-card">
+        <!-- Hero card 1 content goes here -->
+        <img src="" alt="">
+      </div>
+      <div class="help-card">
+        <!-- Hero card 2 content goes here -->
+      </div>
+      <div class="help-card">
+        <!-- Hero card 3 content goes here -->
+      </div>
+      <div class="help-card">
+        <!-- Hero card 4 content goes here -->
+      </div>
+    </div>
+    <object data="/list.txt" type="" style="width: 1000px;"></object>
+    <ul id="progressbar">
+      <li class="active">Trick 1</li>
+      <li>Trick 2</li>
+      <li>Trick 3</li>
+      <li>Trick 4</li>
+    </ul>
+    <div class="progress-bar">
+      <div class="progress-stage">
+        Stage 1<br>
+        <img src="stage1.png" alt="stage1" style="width: 100px;">
+      </div>
+      <div class="progress-stage">
+        Stage 2<br>
+        <img src="stage2.png" alt="stage2" style="width: 100px;">
+      </div>
+      <div class="progress-stage">
+        Stage 3<br>
+        <img src="stage3.png" alt="stage3" style="width: 100px;">
+      </div>
+      <div class="progress-stage">
+        Stage 4<br>
+        <img src="stage4.png" alt="stage4" style="width: 100px;">
+      </div>
+    </div>
+    <div class="vector-arts">
+      <!-- Placeholder for vector arts goes here -->
+    </div>
+  </section>
+
+  <div class="testimonial-section" id="testimonials">
+    <div class="wrapper">
+      <h2>Testimonials</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <img src="testimonial1.jpg" alt="Testimonial 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor urna tellus, a fringilla ipsum tempor ac.</p>
+            <div class="testimonial-author">
+              <h4>John Doe</h4>
+              <p>Company ABC</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <img src="testimonial2.jpg" alt="Testimonial 2">
+            <p>Ut auctor urna tellus, a fringilla ipsum tempor ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="testimonial-author">
+              <h4>Jane Smith</h4>
+              <p>Company XYZ</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more testimonial slides as needed -->
+      </div>
+      <div class="testimonial-buttons">
+        <button class="testimonial-button active" onclick="toggleTestimonial(0)">1</button>
+        <button class="testimonial-button" onclick="toggleTestimonial(1)">2</button>
+        <!-- Add more buttons as needed -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <b>BaatKaro</b>
+    <address>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio hic atque praesentium asperiores eos, eius magni necessitatibus voluptas excepturi ex!</address>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.7724983909743!2d85.81961527490924!3d20.351014981134096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1824a8b3509%3A0xbc66ad5bb4d0206c!2sBaatkaro!5e0!3m2!1sen!2sin!4v1688850217871!5m2!1sen!2sin" width="300" height="150" style="border:1px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <dialog class="dialog">Welcome to BAATKARO</dialog>
+  </footer>
+
+  <script>
+    function toggleCard(cardIndex) {
+      var cards = document.getElementsByClassName('card');
+      var buttons = document.getElementsByClassName('card-button');
+
+      // Hide all cards and deactivate buttons
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].classList.remove('active');
+        buttons[i].classList.remove('active');
+      }
+
+      // Show the selected card and activate the corresponding button
+      cards[cardIndex].classList.add('active');
+      buttons[cardIndex].classList.add('active');
+    }
+
+    function toggleTestimonial(index) {
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const buttons = document.querySelectorAll('.testimonial-button');
+
+      // Hide all slides and remove 'active' class from buttons
+      slides.forEach((slide) => {
+        slide.style.display = 'none';
+      });
+
+      buttons.forEach((button) => {
+        button.classList.remove('active');
+      });
+
+      // Show the selected slide and add 'active' class to the button
+      slides[index].style.display = 'block';
+      buttons[index].classList.add('active');
+    }
+
+    function updateSearchInput(value) {
+      document.getElementById('searchInput').value = value;
+    }
+
+    function search() {
+      const searchInput = document.getElementById('searchInput').value;
+      const selectedCity = document.getElementById('cityDropdown').value;
+      // Perform search or any other actions with the input values
+      console.log('Search:', searchInput, 'City:', selectedCity);
+    }
+
+    function scrollToTestimonials() {
+      const testimonialsSection = document.getElementById('testimonials');
+      testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleMenu() {
+      var menu = document.querySelector('.hamburger-menu');
+      var nav = document.querySelector('nav');
+      menu.classList.toggle('active');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

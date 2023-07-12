@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="contactB.CSS">
+
+  <script src="index.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <div class="logo">Logo</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" onclick="scrollToTestimonials()">About</a></li>
+
+        <li><a href="#">Services</a></li>
+        <li><a href="contactB.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We are here to help you. Please contact us with any questions or concerns.</p>
+    <div class="contact-info">
+      <div class="info">
+        <h3>Email</h3>
+        <p>info@example.com</p>
+      </div>
+      <div class="info">
+        <h3>Phone</h3>
+        <p>+1 234 567 890</p>
+      </div>
+      <div class="info">
+        <h3>Address</h3>
+        <p>123 Main Street, Anytown, CA 12345</p>
+      </div>
+    </div>
+    <form action="/contact" method="post">
+      <input type="text" name="name" placeholder="Your name">
+      <input type="email" name="email" placeholder="Your email">
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" placeholder="Your message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <footer></footer>
+
+</body>
+</html>
